@@ -9,10 +9,12 @@ import { HomeComponent } from './components/home/home.component';
 import { BaseService } from './services/bas.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BlogDialogComponent } from './components/blog-dialog/blog-dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    BlogDialogComponent
   ],
   imports: [
     BrowserModule,
