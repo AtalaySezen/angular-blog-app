@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { BlogService } from 'src/app/services/blog.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  blogData:Array<any>=[];
+
+
+  constructor(private blogService:BlogService) { }
 
   ngOnInit(): void {
+    this.blogService.getPosts().subscribe((res)=>{
+      console.log(res);
+      this.blogData = res; //BlogData array`e res eşitlendi.
+    })
   }
 
 }
