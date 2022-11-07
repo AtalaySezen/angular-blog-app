@@ -8,7 +8,8 @@ import { BlogService } from 'src/app/services/blog.service';
 export class HomeComponent implements OnInit {
 
   blogData:Array<any>=[];
-
+  pageSize = 8;
+  page=13;
 
   constructor(private blogService:BlogService) { }
 
