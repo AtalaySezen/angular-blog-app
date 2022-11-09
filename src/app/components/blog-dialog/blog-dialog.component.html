@@ -1,1 +1,27 @@
-<p>blog-dialog works!</p>
+<div style="display:flex; justify-content:space-between;">
+    <div style="display:flex; align-items:center;">
+        <h3 style="margin:0px;">
+            <span>{{isUpdate?'Yazıyı Güncelle':'Yazıyı Gör'}}</span>
+        </h3>
+    </div>
+    <button mat-button style="font-size:16px; font-weight: 400;" (click)="close()">
+        x
+    </button>
+</div>
+
+<mat-divider></mat-divider>
+<div *ngIf="!isUpdate">
+<div class="row">
+    <div class="col-md-6">
+        <img class="w-100" src="assets/images/image{{imageUrl}}.jpg" alt="">
+    </div>
+    <div class="col-md-6">
+    <h2>{{title}}</h2>
+    <p>{{body}}</p>
+    </div>
+</div>
+</div>
+
+<div *ngIf="isUpdate">
+    Düzenle
+</div>

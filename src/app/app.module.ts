@@ -10,6 +10,9 @@ import { BaseService } from './services/bas.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BlogDialogComponent } from './components/blog-dialog/blog-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatDividerModule} from '@angular/material/divider';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,9 @@ import { BlogDialogComponent } from './components/blog-dialog/blog-dialog.compon
     AppRoutingModule,
     MatCardModule,
     MatButtonModule,
+    MatDialogModule,
     HttpClientModule,
+    MatDividerModule,
     BrowserAnimationsModule,
     NgbModule
   ],
